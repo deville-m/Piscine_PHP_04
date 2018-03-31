@@ -7,7 +7,7 @@ function auth($login, $passwd) {
 		return FALSE;
 	if (($data = @unserialize($content)) === FALSE)
 		return FALSE;
-	$passwd = hash("Whirlpool", $passwd);
+	$passwd = hash("whirlpool", $passwd);
 	return ($data[$login] === $passwd);
 }
 
