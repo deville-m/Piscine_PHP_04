@@ -1,6 +1,6 @@
 <?php
 
-if (@session_start() === FALSE && isset($_GET))
+if (@session_start() === FALSE || !isset($_GET))
 	exit();
 
 if ($_GET['login'] && $_GET['submit'] === "OK")
